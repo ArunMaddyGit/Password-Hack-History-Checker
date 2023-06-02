@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/style.css">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='images/favicon.png') }}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <title>Document</title>
+</head>
+
+    <body>
+        
+      
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+            <a class="navbar-brand mt-2 mt-lg-0" href="#">
+                <img id="logo-img"
+                  src="{{ url_for('static', filename='images/icon.webp') }}"
+                  height="35"
+                  width="40"
+                  alt="Logo"
+                  loading="lazy"
+                />
+              </a>
+            <a class="navbar-brand" href="#"><span class="red">Password</span><span class="red">Checker</span></a>
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Info</a>
+              </li>
+              <!-- <li class="nav-item">
+                <a class="nav-link" href="#">Link</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+              </li> -->
+            </ul>
+            <form class="d-flex">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-primary" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+      <div class="main-screen container col-10">
+        <div class="row justify-content-center">
+            <h2 class="col-8"><span id="title">Check Your <span class="red">Password</span> Hack History</span></h2>
+      <div style="margin-top: 30px;" id="card1" class="card col-10">
+        <!-- <div class="card-header">
+            Check if your Password has ever been Hacked before.
+        </div> -->
+        <div class="card-body">
+          <h5 class="card-title">Check if your<span class="red"> Password </span>has ever been <span class="red"> Hacked </span> before!</h5>
+          <!-- <p class="card-text">With supporting text below as a natural lead-in to additional content.</p> -->
+          <form action="login" method="post">
+            <div class="row">
+            <input class="search-box col-8" type="text" name="text">
+            <input type="submit" class="search-button col-3 btn btn-primary" value="Search">
+            </div>
+        </form>
+        {% if message %}
+        <div style="color: white;padding:15px 16px;" class="return_msg"><h5>{{message}}</h5></div>
+            
+        {% endif %}
+        <div style="color: white;" class="return_msg"></div>
+          <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+        </div>
+        
+      </div>
+        </div>
+   </div>
+
+   
+</body>
+</html>

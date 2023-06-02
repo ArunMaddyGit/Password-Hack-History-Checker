@@ -1,0 +1,56 @@
+
+body {
+    font-family: "Helvetica", Sans-Serif;
+    background-image: url("../static/images/bg.png");
+    background-repeat: repeat;
+  }
+.navbar{
+    color: white;
+    font-weight: bolder;
+}
+#logo-img{
+    margin-left: 20px;
+    margin-right: 20px;
+}
+    
+
+.main-screen{
+    background-color: rgba(236, 248, 249,0.1);
+    height: 450px;
+    margin-top: 5%;
+    padding: 20px 40px 40px 40px;
+    
+}
+#title{
+    font-family: "Georgia","Serif";
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    /* padding-left: 20%; */
+   
+}
+.red{
+    color: red;
+}
+#card1{
+   background-color: rgba(0,0,0,0.9);
+   color: white;
+}
+.card-title{
+    margin-left: 20px;
+    padding-bottom: 15px;
+}
+.search-box{
+    display: inline;
+    margin-left: 30px;
+    /* height: 37px; */
+}
+.search-button{
+    display: inline;
+    color: white;
+    /* font-weight: bold; */
+    
+}
+.card-body{
+    margin-bottom: 40px;
+}
